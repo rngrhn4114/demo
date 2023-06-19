@@ -18,7 +18,7 @@ public class TodoService {
 		//Todo Entity 저장
 		repository.save(entity);
 		//Todo Entity 검색
-		TodoEntity saveEntity = repository.findByUserId(entity.getUserId()).get(0);
+		TodoEntity saveEntity = repository.searchByUserId(entity.getUserId()).get(0);
 		return saveEntity.getUserId();
 	}
 
